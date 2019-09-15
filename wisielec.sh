@@ -37,7 +37,7 @@ function sendStartMessage()
     printGraphWithTag
     printf "#####################################\n"
     printf "# Hasło: $hidden_word\n#\n"
-    printf "# Twoje hasło składa się z $letter znaków,\n# spróbuj je odgadnąć!\n# Możesz skuć tylko 7 razy.\n#\n# Powodzenia!\n"
+    printf "# Twoje hasło składa się z $letter znaków,\n# spróbuj je odgadnąć!\n# Możesz skuć tylko 10 razy.\n#\n# Powodzenia!\n"
     printf "#####################################\n"
 }
 
@@ -250,6 +250,80 @@ function printGraphWithTag()
             printf ": :         \\ \\       : :\n"
             printf ". .                   . .\n"
             ;;
+         8)
+            printf "\n ___________.._______\n"
+            printf "| .__________))______|\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\\\\\n"
+            printf "\"\"\"\"\"\"\"\"\"\"|_ -   -  |\"\"\"|\n"
+            printf "|\"|\"\"\"\"\"\"\"\\ \\        \"|\"|\n"
+            printf "| |        \\ \\        | |\n"
+            printf ": :         \\ \\       : :\n"
+            printf ". .                   . .\n"
+            ;;
+         9)
+            printf "\n\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\n"
+            printf "| |\\\\\n"
+            printf "\"\"\"\"\"\"\"\"\"\"|_ -   -  |\"\"\"|\n"
+            printf "|\"|\"\"\"\"\"\"\"\\ \\        \"|\"|\n"
+            printf "| |        \\ \\        | |\n"
+            printf ": :         \\ \\       : :\n"
+            printf ". .                   . .\n"
+            ;;
+         10)
+            printf "\n\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\n"
+            printf "\"\"\"\"\"\"\"\"\"\"|_ -   -  |\"\"\"|\n"
+            printf "|\"|\"\"\"\"\"\"\"\\ \\        \"|\"|\n"
+            printf "| |        \\ \\        | |\n"
+            printf ": :         \\ \\       : :\n"
+            printf ". .                   . .\n"
     esac
 }
 
@@ -324,7 +398,7 @@ function incorrectly()
     printf "#####################################\n"
     printf "# Hasło: $hidden_word\n#\n#"
     if [ $chance == 0 ]; then
-	    printf " Nie odgadnięto hasła: $random_word\n#\n#"
+        printf " Nie odgadnięto hasła: $random_word\n#\n#"
         printf " Przegrana :(\n"
     else
          printf " Błąd!\n# Pozostało tobie: $chance szans!\n#"
@@ -340,7 +414,7 @@ readonly FILE_LOC=/usr/share/dict/polish #Przypisujemy sciezke do slownika
 random_word=$(shuf -n 1 $FILE_LOC) #Pobieramy 1 losowa linie ze slownika
 hidden_word="" #Przypisujemy do zmiennej ukryte haslo w postaci _____
 used_char=() #Przechowywujemy uzyte znaki podczas proby odgadniecia hasla
-chance=7 #Liczba pozostalych szans
+chance=10 #Liczba pozostalych szans
 different_characters=0 #Liczba liter do odgadniecia
 letter=0 #Ilosc liter w hasle
 
